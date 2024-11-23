@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--IMPORTAMOS BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg color-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="fa-brands fa-instagram ms-2 me-1"></i>Instagram</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-lg-flex d-xl-flex d-xxl-flex justify-content-end" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                    <button type="button" class="btn btn-success d-sm-none d-md-block d-md-none d-lg-block d-none d-sm-block me-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Crear nuevo post
+                    </button>
+                    <button type="button" class="btn btn-success d-lg-none d-xl-block d-xl-none d-xxl-block d-xxl-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Crear nuevo post
+                    </button>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle d-sm-none d-md-block d-md-none d-lg-block d-none d-sm-block me-4" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-gear"></i>
+                  </a>
+                  <a class="nav-link dropdown-toggle d-lg-none d-xl-block d-xl-none d-xxl-block d-xxl-none" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button type="button" class="btn btn-success btn-md">Configuracion</button>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end drop-color border-dark" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                    <li><a class="dropdown-item" href="#">Accesibilidad</a></li>
+                    <li><a class="dropdown-item" href="#">Privacidad y Datos</a></li>
+                    <li><hr class="dropdown-divider border-dark"></li>
+                    <li><a class="dropdown-item text-danger" href="#">Cerrar sesion</a></li>
+                </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--MODAL-->
+          <div class="modal-post d-flex collap">
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content drop-color border-dark">
+                  <div class="modal-header border-dark">
+                    <h5 class="modal-title" id="exampleModalLabel">Crear un nuevo post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body border-dark">
+                      <h6 class="modal-subtitle">Captura:</h6>
+                      <textarea class="form-control mb-4 border-dark" rows="3" placeholder="Agrega la foto que quieres compartir aca"></textarea>
+                      <a class="border border-1 rounded-1 pe-2 ps-2 pt-1 pb-1 border-secondary me-2 border-dark" href="#"><i class="fa-solid fa-camera text-dark"></i></a>
+                      <a class="border border-1 rounded-1  border-secondary pe-2 ps-2 pt-1 pb-1 border-dark" href="#"><i class="fa-solid fa-location-dot text-dark"></i></a>
+                  </div>
+                  <div class="modal-footer border-dark">
+                      <button type="button" class="btn btn-secondary border-dark" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-primary border-dark">Publicar</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+          </div>
+    </nav>
+    <!--SECCION DE CARDS-->
+    <div class="container-fluid mt-2" aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item"><a class="page-link border-0" href="index.html"><i class="fa fa-th" aria-hidden="true"></i></a></li>
+          <li class="page-item"><a class="page-link border-0 active" href="index2.html"><i class="fa fa-square" aria-hidden="true"></i></a></li>
+        </ul>
+    <section class="container-fluid mt-2 row justify-content-center">
+        <div class="card ms-3 mb-3 col-md-6 col-xl-8 col-xxl-10 col-sm-12 col-12">
+            <div class="title-card d-flex justify-content-between align-content-center">
+              <h5 class="fs-6 fw-bold mt-1 ms-2">My perro loco muestra la lengua!</h5>
+              <p class="fs-6 fw-normal me-2 mt-1">08/26</p>
+            </div>
+            <img src="https://images.pexels.com/photos/58997/pexels-photo-58997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid card-img-top" alt="">
+            <div class="card-footer">
+              <p class="lh-1 fs-6"><span class="fw-bold">262 Likes</span><br>Esta es una buena foto para Instagram.</p>
+            </div>
+        </div>
+
+        <div class="card ms-3 mb-3 col-md-6 col-xl-8 col-xxl-10 col-sm-12 col-12">
+          <div class="title-card d-flex justify-content-between align-content-center">
+            <h5 class="fs-6 fw-bold mt-1 ms-2">El gran cubo rubik!</h5>
+            <p class="fs-6 fw-normal me-2 mt-1">08/26</p>
+          </div>
+          <img src="https://images.pexels.com/photos/54101/magic-cube-cube-puzzle-play-54101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid card-img-top" alt="">
+          <div class="card-footer">
+            <p class="lh-1 fs-6"><span class="fw-bold">556 Likes</span><br>Esta es una buena foto para Instagram.</p>
+          </div>
+      </div>
+
+      <div class="card ms-3 mb-3 col-md-6 col-xl-8 col-xxl-10 col-sm-12 col-12">
+        <div class="title-card d-flex justify-content-between align-content-center">
+          <h5 class="fs-6 fw-bold mt-1 ms-2">el hombre casi invisible!mejor dicho de agua!</h5>
+          <p class="fs-6 fw-normal me-2 mt-1">10/15</p>
+        </div>
+        <img src="https://images.pexels.com/photos/8386364/pexels-photo-8386364.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid card-img-top" alt="">
+        <div class="card-footer">
+          <p class="lh-1 fs-6"><span class="fw-bold">600 Likes</span><br>Esta es una buena foto para Instagram.</p>
+        </div>
+    </div>
+    </section>
+</div>
+    <!--FOOTER-->
+    <footer class="container-fluid">
+      <h5 class="fs-6 text-center">Copyright, 23 de Noviembre del 2024,Federico Iraci, Todos los derechos reservados.</h5>
+      <hr>
+    </footer>
+
+    <!--JAVASCRIPT-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>

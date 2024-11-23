@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--IMPORTAMOS BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg color-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="fa-brands fa-instagram ms-2 me-1"></i>Instagram</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-lg-flex d-xl-flex d-xxl-flex justify-content-end" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                    <button type="button" class="btn btn-success d-sm-none d-md-block d-md-none d-lg-block d-none d-sm-block me-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Crear nuevo post
+                    </button>
+                    <button type="button" class="btn btn-success d-lg-none d-xl-block d-xl-none d-xxl-block d-xxl-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Crear nuevo post
+                    </button>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle d-sm-none d-md-block d-md-none d-lg-block d-none d-sm-block me-4" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-gear"></i>
+                  </a>
+                  <a class="nav-link dropdown-toggle d-lg-none d-xl-block d-xl-none d-xxl-block d-xxl-none" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button type="button" class="btn btn-success btn-md">Configuracion</button>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end drop-color border-dark" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                    <li><a class="dropdown-item" href="#">Accesibilidad</a></li>
+                    <li><a class="dropdown-item" href="#">Privacidad y Datos</a></li>
+                    <li><hr class="dropdown-divider border-dark"></li>
+                    <li><a class="dropdown-item text-danger" href="#">Cerrar sesion</a></li>
+                </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--MODAL-->
+          <div class="modal-post d-flex collap">
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content drop-color border-dark">
+                  <div class="modal-header border-dark">
+                    <h5 class="modal-title" id="exampleModalLabel">Crear un nuevo post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body border-dark">
+                      <h6 class="modal-subtitle">Captura:</h6>
+                      <textarea class="form-control mb-4 border-dark" rows="3" placeholder="Agrega la foto que quieres compartir aca"></textarea>
+                      <a class="border border-1 rounded-1 pe-2 ps-2 pt-1 pb-1 border-secondary me-2 border-dark" href="#"><i class="fa-solid fa-camera text-dark"></i></a>
+                      <a class="border border-1 rounded-1  border-secondary pe-2 ps-2 pt-1 pb-1 border-dark" href="#"><i class="fa-solid fa-location-dot text-dark"></i></a>
+                  </div>
+                  <div class="modal-footer border-dark">
+                      <button type="button" class="btn btn-secondary border-dark" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-primary border-dark">Publicar</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+          </div>
+    </nav>
+    <!--SECCION DE PAGINACION CON GRID Y CARDS DENTRO-->
+    <section class="container-fluid mt-2" aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item"><a class="page-link border-0 active" href="index.html"><i class="fa fa-th" aria-hidden="true"></i></a></li>
+        <li class="page-item"><a class="page-link border-0" href="index2.html"><i class="fa fa-square" aria-hidden="true"></i></a></li>
+      </ul>
+      <!--GRID DE 3 X 3 IMAGENES-->
+      <div class="container-fluid mb-4">
+        <div class="row gx-1 gy-1">
+              
+              <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4" for="i in range(9)">
+                <img src="https://images.pexels.com/photos/1476321/pexels-photo-1476321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid" alt="Imagen 1">
+              </div>
+              
+              <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4" for="i in range(9)">
+                <img src="https://cdn.pixabay.com/photo/2023/05/07/05/16/ai-generated-7975586_960_720.png" class="img-fluid" alt="Imagen 2">
+              </div>
+              
+              <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4" for="i in range(9)">
+                <img src="https://images.pexels.com/photos/29513704/pexels-photo-29513704/free-photo-of-bright-yellow-flower-in-green-foliage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid" alt="Imagen 3">
+              </div>
+              
+              <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4" for="i in range(9)">
+              <img src="https://images.pexels.com/photos/29509679/pexels-photo-29509679/free-photo-of-boston-mill-visitor-center-entrance-in-ohio.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid" alt="Imagen 1">
+              </div>
+              
+              <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4" for="i in range(9)">
+              <img src="https://images.pexels.com/photos/29508521/pexels-photo-29508521/free-photo-of-scenic-autumn-pathway-in-harsewinkel.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid" alt="Imagen 1">
+              </div>
+            
+              <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4" for="i in range(9)">
+              <img src="https://images.pexels.com/photos/29502356/pexels-photo-29502356/free-photo-of-digital-shopping-with-mobile-payment-app.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid" alt="Imagen 1">
+              </div>
+            
+              <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4" for="i in range(9)">
+              <img src="https://media.istockphoto.com/id/2058507417/es/vector/icono-letrero-logotipo-de-inteligencia-artificial-en-el-estilo-de-l%C3%ADnea-de-circuito-dise%C3%B1o.jpg?s=1024x1024&w=is&k=20&c=Xb1ba6DW-svGsZ4TeF6plUCPzr6c14-l-Bs5XQrjRH4=" class="img-fluid" alt="Imagen 1">
+              </div>
+          
+              <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4" for="i in range(9)">
+              <img src="https://media.istockphoto.com/id/2153334033/es/foto/hombre-de-negocios-que-usa-una-computadora-port%C3%A1til-y-una-tableta-para-analizar-datos.jpg?s=1024x1024&w=is&k=20&c=140rXMdbn9zai3nXv-_Alhme6ugqjrKXDV7Itugccwg=" class="img-fluid" alt="Imagen 1">
+              </div>
+        
+              <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4" for="i in range(9)">
+              <img src="https://media.istockphoto.com/id/2160263962/es/foto/analyst-utilizing-technology-and-dashboard-with-charts-data-science-and-big-data-technology.jpg?s=1024x1024&w=is&k=20&c=D-nYINOnTz3MjPjka2hVXGuM4vCrBMz7q3Z9H_3Ss7k=" class="img-fluid" alt="Imagen 1">
+              </div>
+          
+          </div>
+      </div>
+    </section>
+    
+    <!--FOOTER-->
+    <footer class="container-fluid">
+      <h5 class="fs-6 text-center">Copyright, 23 de Noviembre del 2024,Federico Iraci, Todos los derechos reservados.</h5>
+      <hr>
+    </footer>
+
+    <!--JAVASCRIPT-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
